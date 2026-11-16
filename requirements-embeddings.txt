@@ -1,0 +1,3 @@
+﻿# Optional semantic embedding backend. Use CPU-only torch; no provider or credentials.
+# Install CPU torch first using the PyTorch CPU wheel index, then this file.
+sentence-transformers>=3.0,<6.0

@@ -1,0 +1,2910 @@
+{
+  "evaluation": "fixed scenario batch",
+  "mode": "llm",
+  "metric_computation": {
+    "groundedness": "fraction of required evidence facts present in retrieved passages",
+    "context_relevance": "fraction of retrieved passages overlapping required evidence terms",
+    "faithfulness": "required evidence facts reflected by rationale/evidence, with route match bonus",
+    "hallucination_rate": "unsupported rationale sentence fraction plus unresolved-citation fraction"
+  },
+  "before": {
+    "prompt_version": "v1",
+    "scenario_count": 20,
+    "successful_runs": 20,
+    "failures": [],
+    "metrics": {
+      "groundedness": 0.7417,
+      "context_relevance": 0.73,
+      "faithfulness": 0.7917,
+      "hallucination_rate": 0.6583
+    },
+    "route_accuracy": 0.35,
+    "per_scenario": [
+      {
+        "scenario_id": "S01-section-4-1",
+        "groundedness": 0.5,
+        "context_relevance": 0.4,
+        "faithfulness": 0.5,
+        "hallucination_rate": 0.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 383,
+            "completion_tokens": 59,
+            "cost": 0.0,
+            "latency_seconds": 0.0163,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1275,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 219,
+            "completion_tokens": 102,
+            "cost": 0.0,
+            "latency_seconds": 0.0145,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1197,
+            "completion_tokens": 841,
+            "cost": 0.0,
+            "latency_seconds": 0.0161,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1165,
+            "completion_tokens": 152,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S02-cancellation-14-days",
+        "groundedness": 1.0,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 360,
+            "completion_tokens": 37,
+            "cost": 0.0,
+            "latency_seconds": 0.0169,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1117,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0146,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 196,
+            "completion_tokens": 79,
+            "cost": 0.0,
+            "latency_seconds": 0.0145,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1042,
+            "completion_tokens": 724,
+            "cost": 0.0,
+            "latency_seconds": 0.0138,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1030,
+            "completion_tokens": 132,
+            "cost": 0.0,
+            "latency_seconds": 0.0129,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S03-cancellation-48-hours",
+        "groundedness": 1.0,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 357,
+            "completion_tokens": 34,
+            "cost": 0.0,
+            "latency_seconds": 0.015,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1189,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0152,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 193,
+            "completion_tokens": 76,
+            "cost": 0.0,
+            "latency_seconds": 0.0136,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1117,
+            "completion_tokens": 804,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1105,
+            "completion_tokens": 132,
+            "cost": 0.0,
+            "latency_seconds": 0.0136,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S04-cancellation-12h-no-alternate",
+        "groundedness": 0.6667,
+        "context_relevance": 1.0,
+        "faithfulness": 0.6667,
+        "hallucination_rate": 0.6667,
+        "route_correct": false,
+        "route": "decline",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 39,
+            "cost": 0.0,
+            "latency_seconds": 0.0134,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1319,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0135,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 199,
+            "completion_tokens": 79,
+            "cost": 0.0,
+            "latency_seconds": 0.0133,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1238,
+            "completion_tokens": 920,
+            "cost": 0.0,
+            "latency_seconds": 0.0147,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1226,
+            "completion_tokens": 136,
+            "cost": 0.0,
+            "latency_seconds": 0.0141,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S05-cancellation-alternate-taken",
+        "groundedness": 1.0,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.6667,
+        "route_correct": true,
+        "route": "decline",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 361,
+            "completion_tokens": 37,
+            "cost": 0.0,
+            "latency_seconds": 0.0124,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1314,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0151,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 196,
+            "completion_tokens": 80,
+            "cost": 0.0,
+            "latency_seconds": 0.0127,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1238,
+            "completion_tokens": 920,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1226,
+            "completion_tokens": 136,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S06-cancellation-no-contact",
+        "groundedness": 1.0,
+        "context_relevance": 0.6,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 360,
+            "completion_tokens": 36,
+            "cost": 0.0,
+            "latency_seconds": 0.0135,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1108,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 196,
+            "completion_tokens": 76,
+            "cost": 0.0,
+            "latency_seconds": 0.0143,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1030,
+            "completion_tokens": 716,
+            "cost": 0.0,
+            "latency_seconds": 0.0162,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1018,
+            "completion_tokens": 132,
+            "cost": 0.0,
+            "latency_seconds": 0.0149,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S07-cancellation-force-majeure",
+        "groundedness": 0.5,
+        "context_relevance": 0.6,
+        "faithfulness": 0.5,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 362,
+            "completion_tokens": 38,
+            "cost": 0.0,
+            "latency_seconds": 0.0163,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1148,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0185,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 197,
+            "completion_tokens": 81,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1072,
+            "completion_tokens": 754,
+            "cost": 0.0,
+            "latency_seconds": 0.0237,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1059,
+            "completion_tokens": 132,
+            "cost": 0.0,
+            "latency_seconds": 0.0187,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S08-waiting-meals",
+        "groundedness": 1.0,
+        "context_relevance": 0.4,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.8333,
+        "route_correct": false,
+        "route": "decline",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 39,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1214,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 199,
+            "completion_tokens": 82,
+            "cost": 0.0,
+            "latency_seconds": 0.0136,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1136,
+            "completion_tokens": 815,
+            "cost": 0.0,
+            "latency_seconds": 0.0169,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1123,
+            "completion_tokens": 136,
+            "cost": 0.0,
+            "latency_seconds": 0.0201,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S09-same-ticket-connection",
+        "groundedness": 0.3333,
+        "context_relevance": 0.6,
+        "faithfulness": 0.5833,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 358,
+            "completion_tokens": 35,
+            "cost": 0.0,
+            "latency_seconds": 0.0143,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1056,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0164,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 194,
+            "completion_tokens": 75,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 979,
+            "completion_tokens": 666,
+            "cost": 0.0,
+            "latency_seconds": 0.0176,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 967,
+            "completion_tokens": 131,
+            "cost": 0.0,
+            "latency_seconds": 0.0224,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S10-delay-short-block",
+        "groundedness": 0.6667,
+        "context_relevance": 1.0,
+        "faithfulness": 0.6667,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 355,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1289,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0158,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 191,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1217,
+            "completion_tokens": 908,
+            "cost": 0.0,
+            "latency_seconds": 0.0164,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1205,
+            "completion_tokens": 132,
+            "cost": 0.0,
+            "latency_seconds": 0.0163,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S11-delay-medium-block",
+        "groundedness": 1.0,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 356,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1332,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0177,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 191,
+            "completion_tokens": 73,
+            "cost": 0.0,
+            "latency_seconds": 0.0146,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1279,
+            "completion_tokens": 953,
+            "cost": 0.0,
+            "latency_seconds": 0.0172,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1247,
+            "completion_tokens": 151,
+            "cost": 0.0,
+            "latency_seconds": 0.0157,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S12-delay-long-block",
+        "groundedness": 1.0,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 355,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0175,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1289,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0178,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 191,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1217,
+            "completion_tokens": 908,
+            "cost": 0.0,
+            "latency_seconds": 0.0167,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1205,
+            "completion_tokens": 132,
+            "cost": 0.0,
+            "latency_seconds": 0.0152,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S13-domestic-delay-over-six",
+        "groundedness": 0.75,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 355,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0139,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1086,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0143,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 191,
+            "completion_tokens": 73,
+            "cost": 0.0,
+            "latency_seconds": 0.0132,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1032,
+            "completion_tokens": 704,
+            "cost": 0.0,
+            "latency_seconds": 0.0177,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1001,
+            "completion_tokens": 151,
+            "cost": 0.0,
+            "latency_seconds": 0.015,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S14-delay-over-24-hours",
+        "groundedness": 0.6667,
+        "context_relevance": 0.8,
+        "faithfulness": 0.9167,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 353,
+            "completion_tokens": 29,
+            "cost": 0.0,
+            "latency_seconds": 0.0134,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1032,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.017,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 188,
+            "completion_tokens": 70,
+            "cost": 0.0,
+            "latency_seconds": 0.0139,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 982,
+            "completion_tokens": 661,
+            "cost": 0.0,
+            "latency_seconds": 0.0148,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 950,
+            "completion_tokens": 152,
+            "cost": 0.0,
+            "latency_seconds": 0.014,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S15-night-delay",
+        "groundedness": 0.0,
+        "context_relevance": 1.0,
+        "faithfulness": 0.25,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 350,
+            "completion_tokens": 27,
+            "cost": 0.0,
+            "latency_seconds": 0.0157,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1321,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.015,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 186,
+            "completion_tokens": 67,
+            "cost": 0.0,
+            "latency_seconds": 0.0189,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1273,
+            "completion_tokens": 953,
+            "cost": 0.0,
+            "latency_seconds": 0.0166,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1242,
+            "completion_tokens": 151,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S16-delay-cause-disputed",
+        "groundedness": 1.0,
+        "context_relevance": 0.8,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 359,
+            "completion_tokens": 36,
+            "cost": 0.0,
+            "latency_seconds": 0.013,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 1024,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 195,
+            "completion_tokens": 76,
+            "cost": 0.0,
+            "latency_seconds": 0.0174,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 948,
+            "completion_tokens": 635,
+            "cost": 0.0,
+            "latency_seconds": 0.0171,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 935,
+            "completion_tokens": 132,
+            "cost": 0.0,
+            "latency_seconds": 0.0148,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S17-domestic-downgrade",
+        "groundedness": 0.75,
+        "context_relevance": 0.6,
+        "faithfulness": 0.75,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 354,
+            "completion_tokens": 31,
+            "cost": 0.0,
+            "latency_seconds": 0.0132,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 930,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0134,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 190,
+            "completion_tokens": 71,
+            "cost": 0.0,
+            "latency_seconds": 0.0129,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 880,
+            "completion_tokens": 557,
+            "cost": 0.0,
+            "latency_seconds": 0.0137,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 845,
+            "completion_tokens": 154,
+            "cost": 0.0,
+            "latency_seconds": 0.0137,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S18-international-downgrade-1200",
+        "groundedness": 1.0,
+        "context_relevance": 0.4,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 355,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0131,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 832,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0147,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 191,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0141,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 780,
+            "completion_tokens": 455,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 747,
+            "completion_tokens": 153,
+            "cost": 0.0,
+            "latency_seconds": 0.0152,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S19-international-downgrade-2600",
+        "groundedness": 0.5,
+        "context_relevance": 0.2,
+        "faithfulness": 0.5,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 355,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0195,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 832,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0205,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 191,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 780,
+            "completion_tokens": 455,
+            "cost": 0.0,
+            "latency_seconds": 0.017,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 747,
+            "completion_tokens": 153,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S20-international-downgrade-4000",
+        "groundedness": 0.5,
+        "context_relevance": 0.2,
+        "faithfulness": 0.5,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v1",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 355,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 832,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0152,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 191,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0145,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 780,
+            "completion_tokens": 455,
+            "cost": 0.0,
+            "latency_seconds": 0.0156,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v1",
+            "correlation_id": null,
+            "prompt_tokens": 747,
+            "completion_tokens": 153,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          }
+        ]
+      }
+    ],
+    "cost_per_100_runs": 0.0,
+    "largest_single_cost_driver": {
+      "step": "research_tool_selection",
+      "prompt_version": "v1",
+      "correlation_id": null,
+      "prompt_tokens": 383,
+      "completion_tokens": 59,
+      "cost": 0.0,
+      "latency_seconds": 0.0163,
+      "status": "ok"
+    }
+  },
+  "after": {
+    "prompt_version": "v2",
+    "scenario_count": 20,
+    "successful_runs": 20,
+    "failures": [],
+    "metrics": {
+      "groundedness": 0.7542,
+      "context_relevance": 0.5591,
+      "faithfulness": 0.8167,
+      "hallucination_rate": 0.5167
+    },
+    "route_accuracy": 0.4,
+    "per_scenario": [
+      {
+        "scenario_id": "S01-section-4-1",
+        "groundedness": 0.75,
+        "context_relevance": 0.5,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.8333,
+        "route_correct": true,
+        "route": "decline",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 390,
+            "completion_tokens": 59,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1283,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0157,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1551,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.0165,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1175,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 226,
+            "completion_tokens": 102,
+            "cost": 0.0,
+            "latency_seconds": 0.0146,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 2065,
+            "completion_tokens": 1545,
+            "cost": 0.0,
+            "latency_seconds": 0.017,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1876,
+            "completion_tokens": 253,
+            "cost": 0.0,
+            "latency_seconds": 0.0158,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S02-cancellation-14-days",
+        "groundedness": 1.0,
+        "context_relevance": 0.4615,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.6667,
+        "route_correct": false,
+        "route": "decline",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 368,
+            "completion_tokens": 37,
+            "cost": 0.0,
+            "latency_seconds": 0.0166,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1125,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0168,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1339,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.0173,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1130,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0166,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 203,
+            "completion_tokens": 79,
+            "cost": 0.0,
+            "latency_seconds": 0.0138,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1817,
+            "completion_tokens": 1353,
+            "cost": 0.0,
+            "latency_seconds": 0.0158,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1666,
+            "completion_tokens": 223,
+            "cost": 0.0,
+            "latency_seconds": 0.0138,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S03-cancellation-48-hours",
+        "groundedness": 1.0,
+        "context_relevance": 0.5,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 365,
+            "completion_tokens": 34,
+            "cost": 0.0,
+            "latency_seconds": 0.0135,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1197,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0162,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1411,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.0151,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1124,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0161,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 200,
+            "completion_tokens": 76,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1985,
+            "completion_tokens": 1508,
+            "cost": 0.0,
+            "latency_seconds": 0.0183,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1816,
+            "completion_tokens": 230,
+            "cost": 0.0,
+            "latency_seconds": 0.0164,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S04-cancellation-12h-no-alternate",
+        "groundedness": 0.6667,
+        "context_relevance": 0.6154,
+        "faithfulness": 0.6667,
+        "hallucination_rate": 0.6667,
+        "route_correct": false,
+        "route": "decline",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 370,
+            "completion_tokens": 39,
+            "cost": 0.0,
+            "latency_seconds": 0.0139,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1326,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1540,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.0168,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1135,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0141,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 206,
+            "completion_tokens": 79,
+            "cost": 0.0,
+            "latency_seconds": 0.0145,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1818,
+            "completion_tokens": 1353,
+            "cost": 0.0,
+            "latency_seconds": 0.018,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1666,
+            "completion_tokens": 223,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S05-cancellation-alternate-taken",
+        "groundedness": 1.0,
+        "context_relevance": 0.6154,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.6667,
+        "route_correct": true,
+        "route": "decline",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 368,
+            "completion_tokens": 37,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1322,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1535,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.016,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1131,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0149,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 204,
+            "completion_tokens": 80,
+            "cost": 0.0,
+            "latency_seconds": 0.015,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1818,
+            "completion_tokens": 1353,
+            "cost": 0.0,
+            "latency_seconds": 0.0167,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1667,
+            "completion_tokens": 223,
+            "cost": 0.0,
+            "latency_seconds": 0.0163,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S06-cancellation-no-contact",
+        "groundedness": 1.0,
+        "context_relevance": 0.5714,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.6667,
+        "route_correct": true,
+        "route": "decline",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 367,
+            "completion_tokens": 36,
+            "cost": 0.0,
+            "latency_seconds": 0.0132,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1115,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1270,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.0171,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1129,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0173,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 203,
+            "completion_tokens": 76,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1898,
+            "completion_tokens": 1420,
+            "cost": 0.0,
+            "latency_seconds": 0.0164,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1729,
+            "completion_tokens": 234,
+            "cost": 0.0,
+            "latency_seconds": 0.0145,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S07-cancellation-force-majeure",
+        "groundedness": 0.5,
+        "context_relevance": 0.2143,
+        "faithfulness": 0.5,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 369,
+            "completion_tokens": 38,
+            "cost": 0.0,
+            "latency_seconds": 0.0145,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1156,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0172,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1203,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.0214,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1133,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0182,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 205,
+            "completion_tokens": 81,
+            "cost": 0.0,
+            "latency_seconds": 0.0139,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1940,
+            "completion_tokens": 1458,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1770,
+            "completion_tokens": 230,
+            "cost": 0.0,
+            "latency_seconds": 0.0139,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S08-waiting-meals",
+        "groundedness": 1.0,
+        "context_relevance": 0.1818,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.8333,
+        "route_correct": false,
+        "route": "decline",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 370,
+            "completion_tokens": 39,
+            "cost": 0.0,
+            "latency_seconds": 0.0132,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1221,
+            "completion_tokens": 16,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1471,
+            "completion_tokens": 30,
+            "cost": 0.0,
+            "latency_seconds": 0.0133,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1135,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 206,
+            "completion_tokens": 82,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1540,
+            "completion_tokens": 1108,
+            "cost": 0.0,
+            "latency_seconds": 0.0158,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1424,
+            "completion_tokens": 201,
+            "cost": 0.0,
+            "latency_seconds": 0.016,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S09-same-ticket-connection",
+        "groundedness": 0.3333,
+        "context_relevance": 0.6,
+        "faithfulness": 0.5833,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 366,
+            "completion_tokens": 35,
+            "cost": 0.0,
+            "latency_seconds": 0.016,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1063,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0158,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 201,
+            "completion_tokens": 75,
+            "cost": 0.0,
+            "latency_seconds": 0.014,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 986,
+            "completion_tokens": 666,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 975,
+            "completion_tokens": 131,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S10-delay-short-block",
+        "groundedness": 0.6667,
+        "context_relevance": 1.0,
+        "faithfulness": 0.6667,
+        "hallucination_rate": 0.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1297,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0165,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1582,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.016,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1273,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0183,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 198,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0158,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1652,
+            "completion_tokens": 1266,
+            "cost": 0.0,
+            "latency_seconds": 0.0186,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1570,
+            "completion_tokens": 175,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S11-delay-medium-block",
+        "groundedness": 1.0,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1339,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0152,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1624,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1274,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.015,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 199,
+            "completion_tokens": 73,
+            "cost": 0.0,
+            "latency_seconds": 0.0136,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1713,
+            "completion_tokens": 1310,
+            "cost": 0.0,
+            "latency_seconds": 0.0162,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1612,
+            "completion_tokens": 195,
+            "cost": 0.0,
+            "latency_seconds": 0.016,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S12-delay-long-block",
+        "groundedness": 1.0,
+        "context_relevance": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1297,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1581,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0176,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1273,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0176,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 198,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0141,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1652,
+            "completion_tokens": 1266,
+            "cost": 0.0,
+            "latency_seconds": 0.0176,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1570,
+            "completion_tokens": 175,
+            "cost": 0.0,
+            "latency_seconds": 0.0163,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S13-domestic-delay-over-six",
+        "groundedness": 0.75,
+        "context_relevance": 0.8,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1093,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.016,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1261,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0202,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1273,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0148,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 199,
+            "completion_tokens": 73,
+            "cost": 0.0,
+            "latency_seconds": 0.0138,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1637,
+            "completion_tokens": 1217,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1519,
+            "completion_tokens": 206,
+            "cost": 0.0,
+            "latency_seconds": 0.0147,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S14-delay-over-24-hours",
+        "groundedness": 0.6667,
+        "context_relevance": 0.5556,
+        "faithfulness": 0.9167,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 360,
+            "completion_tokens": 29,
+            "cost": 0.0,
+            "latency_seconds": 0.013,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1039,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0126,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1436,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.014,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1268,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0137,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 196,
+            "completion_tokens": 70,
+            "cost": 0.0,
+            "latency_seconds": 0.0138,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1417,
+            "completion_tokens": 1018,
+            "cost": 0.0,
+            "latency_seconds": 0.0169,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1315,
+            "completion_tokens": 196,
+            "cost": 0.0,
+            "latency_seconds": 0.0149,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S15-night-delay",
+        "groundedness": 0.0,
+        "context_relevance": 0.6667,
+        "faithfulness": 0.25,
+        "hallucination_rate": 0.0,
+        "route_correct": true,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 358,
+            "completion_tokens": 27,
+            "cost": 0.0,
+            "latency_seconds": 0.0126,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1329,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0152,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1638,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0167,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1263,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.016,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 193,
+            "completion_tokens": 67,
+            "cost": 0.0,
+            "latency_seconds": 0.0142,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1708,
+            "completion_tokens": 1310,
+            "cost": 0.0,
+            "latency_seconds": 0.0149,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1607,
+            "completion_tokens": 195,
+            "cost": 0.0,
+            "latency_seconds": 0.0138,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S16-delay-cause-disputed",
+        "groundedness": 1.0,
+        "context_relevance": 0.5,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 367,
+            "completion_tokens": 36,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1031,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0149,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1140,
+            "completion_tokens": 24,
+            "cost": 0.0,
+            "latency_seconds": 0.0146,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1281,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0165,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 202,
+            "completion_tokens": 76,
+            "cost": 0.0,
+            "latency_seconds": 0.015,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1553,
+            "completion_tokens": 1148,
+            "cost": 0.0,
+            "latency_seconds": 0.0163,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 1453,
+            "completion_tokens": 187,
+            "cost": 0.0,
+            "latency_seconds": 0.0157,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S17-domestic-downgrade",
+        "groundedness": 0.75,
+        "context_relevance": 0.6,
+        "faithfulness": 0.75,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 362,
+            "completion_tokens": 31,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 937,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0154,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 198,
+            "completion_tokens": 71,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 887,
+            "completion_tokens": 557,
+            "cost": 0.0,
+            "latency_seconds": 0.015,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 853,
+            "completion_tokens": 154,
+            "cost": 0.0,
+            "latency_seconds": 0.0147,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S18-international-downgrade-1200",
+        "groundedness": 1.0,
+        "context_relevance": 0.4,
+        "faithfulness": 1.0,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0155,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 840,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0156,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 198,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0153,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 787,
+            "completion_tokens": 455,
+            "cost": 0.0,
+            "latency_seconds": 0.0156,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 754,
+            "completion_tokens": 153,
+            "cost": 0.0,
+            "latency_seconds": 0.0149,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S19-international-downgrade-2600",
+        "groundedness": 0.5,
+        "context_relevance": 0.2,
+        "faithfulness": 0.5,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0144,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 839,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.0146,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 198,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0151,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 787,
+            "completion_tokens": 455,
+            "cost": 0.0,
+            "latency_seconds": 0.0164,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 754,
+            "completion_tokens": 153,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "scenario_id": "S20-international-downgrade-4000",
+        "groundedness": 0.5,
+        "context_relevance": 0.2,
+        "faithfulness": 0.5,
+        "hallucination_rate": 1.0,
+        "route_correct": false,
+        "route": "request_further_evidence",
+        "prompt_version": "v2",
+        "cost": 0.0,
+        "model_calls": [
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 363,
+            "completion_tokens": 32,
+            "cost": 0.0,
+            "latency_seconds": 0.0143,
+            "status": "ok"
+          },
+          {
+            "step": "research_tool_selection",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 840,
+            "completion_tokens": 5,
+            "cost": 0.0,
+            "latency_seconds": 0.014,
+            "status": "ok"
+          },
+          {
+            "step": "claim_analysis",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 198,
+            "completion_tokens": 72,
+            "cost": 0.0,
+            "latency_seconds": 0.0148,
+            "status": "ok"
+          },
+          {
+            "step": "regulation_research",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 787,
+            "completion_tokens": 455,
+            "cost": 0.0,
+            "latency_seconds": 0.0183,
+            "status": "ok"
+          },
+          {
+            "step": "entitlement",
+            "prompt_version": "v2",
+            "correlation_id": null,
+            "prompt_tokens": 754,
+            "completion_tokens": 153,
+            "cost": 0.0,
+            "latency_seconds": 0.0159,
+            "status": "ok"
+          }
+        ]
+      }
+    ],
+    "cost_per_100_runs": 0.0,
+    "largest_single_cost_driver": {
+      "step": "research_tool_selection",
+      "prompt_version": "v2",
+      "correlation_id": null,
+      "prompt_tokens": 390,
+      "completion_tokens": 59,
+      "cost": 0.0,
+      "latency_seconds": 0.0154,
+      "status": "ok"
+    }
+  },
+  "metric_delta_after_minus_before": {
+    "groundedness": 0.0125,
+    "context_relevance": -0.1709,
+    "faithfulness": 0.025,
+    "hallucination_rate": -0.1416
+  },
+  "deliberate_change": "v1 to v2 adds an explicit search for linked conditions, exceptions and facilities before concluding.",
+  "prompt_comparison": {
+    "same_scenarios": 20,
+    "metric_winners": {
+      "groundedness": {
+        "better": "after",
+        "absolute_delta": 0.0125
+      },
+      "context_relevance": {
+        "better": "before",
+        "absolute_delta": -0.1709
+      },
+      "faithfulness": {
+        "better": "after",
+        "absolute_delta": 0.025
+      },
+      "hallucination_rate": {
+        "better": "after",
+        "absolute_delta": -0.1416
+      }
+    }
+  }
+}

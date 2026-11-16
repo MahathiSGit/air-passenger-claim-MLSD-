@@ -1,0 +1,157 @@
+services:
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: ["redis-data:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  indexer:
+    build: .
+    command: ["python", "-m", "rag.retrieval", "--incremental"]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      RAG_INDEX_PATH: /app/data/rag/faiss.index
+    volumes: ["app-data:/app/data", "model-cache:/app/model-cache"]
+    restart: "no"
+  api:
+    build: .
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: sqlite:////app/data/claims.db
+      REDIS_URL: redis://redis:6379/0
+      RAG_INDEX_PATH: /app/data/rag/faiss.index
+      OTEL_EXPORTER_ENDPOINT: http://jaeger:4318/v1/traces
+      AGENT_MODE: ${AGENT_MODE:-demo}
+      MODEL_API_URL: ${MODEL_API_URL:-}
+      MODEL_ID: ${MODEL_ID:-}
+      MODEL_API_KEY: ${MODEL_API_KEY:-}
+      MODEL_TIMEOUT_SECONDS: ${MODEL_TIMEOUT_SECONDS:-180}
+      MODEL_MAX_TOKENS: ${MODEL_MAX_TOKENS:-256}
+      MAX_TOOL_CALLS: ${MAX_TOOL_CALLS:-3}
+      PROMPT_VERSION: ${PROMPT_VERSION:-v1}
+      INPUT_COST_PER_MILLION: ${INPUT_COST_PER_MILLION:-0}
+      OUTPUT_COST_PER_MILLION: ${OUTPUT_COST_PER_MILLION:-0}
+    ports: ["${API_HOST_PORT:-18000}:8000"]
+    volumes: ["app-data:/app/data", "model-cache:/app/model-cache"]
+    depends_on:
+      redis: {condition: service_healthy}
+      indexer: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+  agent-worker:
+    build: .
+    command: ["python", "-m", "app.worker_runner"]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: sqlite:////app/data/claims.db
+      REDIS_URL: redis://redis:6379/0
+      RAG_INDEX_PATH: /app/data/rag/faiss.index
+      OTEL_EXPORTER_ENDPOINT: http://jaeger:4318/v1/traces
+      AGENT_MODE: ${AGENT_MODE:-demo}
+      MODEL_API_URL: ${MODEL_API_URL:-}
+      MODEL_ID: ${MODEL_ID:-}
+      MODEL_API_KEY: ${MODEL_API_KEY:-}
+      MODEL_TIMEOUT_SECONDS: ${MODEL_TIMEOUT_SECONDS:-180}
+      MODEL_MAX_TOKENS: ${MODEL_MAX_TOKENS:-256}
+      MAX_TOOL_CALLS: ${MAX_TOOL_CALLS:-3}
+      PROMPT_VERSION: ${PROMPT_VERSION:-v1}
+      INPUT_COST_PER_MILLION: ${INPUT_COST_PER_MILLION:-0}
+      OUTPUT_COST_PER_MILLION: ${OUTPUT_COST_PER_MILLION:-0}
+    volumes: ["app-data:/app/data", "model-cache:/app/model-cache"]
+    depends_on:
+      redis: {condition: service_healthy}
+      indexer: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "python", "-c", "from redis import Redis; Redis.from_url('redis://redis:6379/0').ping()"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+  model-stub:
+    build: .
+    command: ["uvicorn", "app.stub_model:app", "--host", "0.0.0.0", "--port", "8100"]
+    environment:
+      STUB_DELAY_SECONDS: ${STUB_DELAY_SECONDS:-2}
+    expose: ["8100"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8100/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  frontend:
+    build: ./frontend
+    ports: ["5173:80"]
+    depends_on:
+      api: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost/"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+  prometheus:
+    image: prom/prometheus:latest
+    command: ["--config.file=/etc/prometheus/prometheus.yml"]
+    volumes: ["./observability/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    ports: ["9090:9090"]
+    depends_on: [api, agent-worker, cadvisor, redis-exporter]
+  grafana:
+    image: grafana/grafana:latest
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_METRICS_ENABLED: "true"
+    volumes:
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports: ["3000:3000"]
+    depends_on: [prometheus]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports: ["16686:16686", "4317:4317", "4318:4318"]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost:16686/"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+  redis-exporter:
+    image: oliver006/redis_exporter:latest
+    environment:
+      REDIS_ADDR: redis://redis:6379
+    ports: ["9121:9121"]
+    depends_on:
+      redis: {condition: service_healthy}
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    privileged: true
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    ports: ["8080:8080"]
+volumes:
+  redis-data:
+  app-data:
+  model-cache:
+
+
+

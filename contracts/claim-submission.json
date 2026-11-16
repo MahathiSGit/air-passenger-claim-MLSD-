@@ -1,0 +1,19 @@
+﻿{
+  "name": "AirClaim public API contract",
+  "version": "v1",
+  "source": "FastAPI generated OpenAPI at /openapi.json",
+  "requestSchema": {
+    "complaint": {"type":"string","required":true,"minLength":1,"maxLength":"MAX_COMPLAINT_LENGTH"},
+    "flight_number": {"type":["string","null"],"pattern":"flight designator"},
+    "disruption_type": {"enum":["denied boarding","cancellation","delay","downgrading"]},
+    "scheduled_time": {"type":["string","null"],"format":"HH:MM"},
+    "actual_time": {"type":["string","null"],"format":"HH:MM","requires":"scheduled_time"},
+    "notice_hours": {"type":["number","null"],"minimum":0,"maximum":8760},
+    "block_time_hours": {"type":["number","null"],"exclusiveMinimum":0,"maximum":48},
+    "contact_details_provided": {"type":["boolean","null"]},
+    "alternate_flight": {"type":["string","null"],"maxLength":64},
+    "cause_attribution": {"type":["string","null"],"maxLength":500}
+  },
+  "unknownFields": "forbidden",
+  "malformedRequest": "422 with field errors; persist in quarantine; no agent job"
+}

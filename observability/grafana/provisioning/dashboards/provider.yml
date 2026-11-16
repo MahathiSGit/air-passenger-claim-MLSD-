@@ -1,0 +1,7 @@
+﻿apiVersion: 1
+providers:
+  - name: Air Claim
+    folder: Air Claim
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

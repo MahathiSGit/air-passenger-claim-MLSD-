@@ -1,0 +1,320 @@
+[
+  {
+    "id": "S01-section-4-1",
+    "claim": {
+      "complaint": "My flight was cancelled. I was at the airport and told 90 minutes before departure. The airline put me on a flight four hours later, which I took. I want cancellation compensation."
+    },
+    "expected_outcome": "decline",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 5, paragraph 3.3.2",
+      "text": "Passengers not informed as required by 3.3.1, or who missed a same-ticket connection, shall receive either an acceptable alternate flight or compensation in addition to a full ticket refund. Facilities under 3.8.1(a) apply while waiting for the alternate flight."
+    },
+    "required_facts": [
+      "alternate flight",
+      "compensation",
+      "full ticket refund",
+      "facilities"
+    ]
+  },
+  {
+    "id": "S02-cancellation-14-days",
+    "claim": {
+      "complaint": "Cancellation notice arrived 16 days before departure and an alternate flight was offered."
+    },
+    "expected_outcome": "request_further_evidence",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 5, paragraph 3.3.1",
+      "text": "The airline shall inform the passenger of cancellation at least two weeks before scheduled departure and arrange alternate flight/refund as acceptable. When informed less than two weeks and up to 24 hours before departure, offer alternate flight or refund as acceptable."
+    },
+    "required_facts": [
+      "two weeks",
+      "alternate flight",
+      "refund"
+    ]
+  },
+  {
+    "id": "S03-cancellation-48-hours",
+    "claim": {
+      "complaint": "Cancellation was communicated 48 hours before departure; what are my options?"
+    },
+    "expected_outcome": "request_further_evidence",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 5, paragraph 3.3.1",
+      "text": "The airline shall inform the passenger of cancellation at least two weeks before scheduled departure and arrange alternate flight/refund as acceptable. When informed less than two weeks and up to 24 hours before departure, offer alternate flight or refund as acceptable."
+    },
+    "required_facts": [
+      "24 hours",
+      "alternate flight",
+      "refund"
+    ]
+  },
+  {
+    "id": "S04-cancellation-12h-no-alternate",
+    "claim": {
+      "complaint": "I was told my flight was cancelled 12 hours before departure and no alternate or refund was offered."
+    },
+    "expected_outcome": "request_further_evidence",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 5, paragraph 3.3.2",
+      "text": "Passengers not informed as required by 3.3.1, or who missed a same-ticket connection, shall receive either an acceptable alternate flight or compensation in addition to a full ticket refund. Facilities under 3.8.1(a) apply while waiting for the alternate flight."
+    },
+    "required_facts": [
+      "alternate flight",
+      "compensation",
+      "full ticket refund"
+    ]
+  },
+  {
+    "id": "S05-cancellation-alternate-taken",
+    "claim": {
+      "complaint": "Cancellation notice was 12 hours before departure; I accepted and took an alternate flight."
+    },
+    "expected_outcome": "decline",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 5, paragraph 3.3.2",
+      "text": "Passengers not informed as required by 3.3.1, or who missed a same-ticket connection, shall receive either an acceptable alternate flight or compensation in addition to a full ticket refund. Facilities under 3.8.1(a) apply while waiting for the alternate flight."
+    },
+    "required_facts": [
+      "either",
+      "alternate flight",
+      "compensation"
+    ]
+  },
+  {
+    "id": "S06-cancellation-no-contact",
+    "claim": {
+      "complaint": "My booking had no phone or email contact information; the cancelled flight was replaced."
+    },
+    "expected_outcome": "decline",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 5, paragraph 3.3.3",
+      "text": "No financial compensation is payable to passengers who did not provide adequate contact information at booking. The airline shall refund the ticket or make reasonable alternate travel arrangements; facilities apply while waiting for an alternate flight."
+    },
+    "required_facts": [
+      "no financial compensation",
+      "contact information",
+      "facilities"
+    ]
+  },
+  {
+    "id": "S07-cancellation-force-majeure",
+    "claim": {
+      "complaint": "The airline says cancellation was caused by extraordinary circumstances; the cause is disputed."
+    },
+    "expected_outcome": "escalate_to_human",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 6, paragraph 3.3.4",
+      "text": "No compensation is payable for cancellations caused by extraordinary circumstances beyond airline control as described in paragraphs 1.4 and 1.5."
+    },
+    "required_facts": [
+      "extraordinary circumstances",
+      "beyond airline control"
+    ]
+  },
+  {
+    "id": "S08-waiting-meals",
+    "claim": {
+      "complaint": "I waited at the airport for an alternate flight after cancellation. Were meals and refreshments due?"
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 7, paragraph 3.8.1",
+      "text": "Passengers shall be offered free of charge meals and refreshments in relation to waiting time. Hotel accommodation including transfers is provided when necessary."
+    },
+    "required_facts": [
+      "free of charge",
+      "meals",
+      "refreshments"
+    ]
+  },
+  {
+    "id": "S09-same-ticket-connection",
+    "claim": {
+      "complaint": "I missed a connecting flight booked on the same ticket number after a disruption."
+    },
+    "expected_outcome": "request_further_evidence",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 5, paragraph 3.3.2",
+      "text": "Passengers not informed as required by 3.3.1, or who missed a same-ticket connection, shall receive either an acceptable alternate flight or compensation in addition to a full ticket refund. Facilities under 3.8.1(a) apply while waiting for the alternate flight."
+    },
+    "required_facts": [
+      "same-ticket connection",
+      "alternate flight",
+      "full ticket refund"
+    ]
+  },
+  {
+    "id": "S10-delay-short-block",
+    "claim": {
+      "complaint": "Checked in on time; expected delay is 2 hours, block time is 2 hours."
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 6, paragraph 3.4.1(a)",
+      "text": "Facilities under paragraph 3.8.1(a) apply for a checked-in passenger if delay is 2 hours or more for flights with block time up to 2.5 hours."
+    },
+    "required_facts": [
+      "checked-in",
+      "2 hours or more",
+      "facilities"
+    ]
+  },
+  {
+    "id": "S11-delay-medium-block",
+    "claim": {
+      "complaint": "Checked in; 4-hour block-time flight is expected to be delayed 3 hours."
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 6, paragraph 3.4.1(b)",
+      "text": "Facilities apply for a checked-in passenger if delay is 3 hours or more for flights with block time more than 2.5 and up to 5 hours."
+    },
+    "required_facts": [
+      "3 hours or more",
+      "block time",
+      "facilities"
+    ]
+  },
+  {
+    "id": "S12-delay-long-block",
+    "claim": {
+      "complaint": "Checked in for a 6-hour block-time flight; expected delay is 4 hours."
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 6, paragraph 3.4.1(c)",
+      "text": "Facilities apply when expected delay is 4 hours or more for flights not falling under the preceding block-time bands."
+    },
+    "required_facts": [
+      "4 hours or more",
+      "facilities"
+    ]
+  },
+  {
+    "id": "S13-domestic-delay-over-six",
+    "claim": {
+      "complaint": "Domestic flight departure is expected to be delayed more than 6 hours."
+    },
+    "expected_outcome": "request_further_evidence",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 6, paragraph 3.4.2",
+      "text": "When a domestic flight is expected to be delayed more than 6 hours, the airline shall offer an alternate flight within 6 hours or a full refund."
+    },
+    "required_facts": [
+      "domestic",
+      "more than 6 hours",
+      "alternate flight",
+      "full refund"
+    ]
+  },
+  {
+    "id": "S14-delay-over-24-hours",
+    "claim": {
+      "complaint": "Total flight delay is 25 hours; I need hotel accommodation."
+    },
+    "expected_outcome": "request_further_evidence",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, pages 6-7, paragraphs 3.4.3 and 3.8.1(b)",
+      "text": "When total delay is more than 24 hours, or more than 6 hours for flights scheduled 2000-0300, facilities under 3.8.1(b) apply. These include hotel accommodation when necessary, including transfers."
+    },
+    "required_facts": [
+      "more than 24 hours",
+      "hotel accommodation",
+      "transfers"
+    ]
+  },
+  {
+    "id": "S15-night-delay",
+    "claim": {
+      "complaint": "A flight scheduled for 23:00 was delayed 7 hours."
+    },
+    "expected_outcome": "request_further_evidence",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, pages 6-7, paragraphs 3.4.3 and 3.8.1(b)",
+      "text": "When total delay is more than 24 hours, or more than 6 hours for flights scheduled 2000-0300, facilities under 3.8.1(b) apply. These include hotel accommodation when necessary, including transfers."
+    },
+    "required_facts": [
+      "2000-0300",
+      "more than 6 hours",
+      "hotel"
+    ]
+  },
+  {
+    "id": "S16-delay-cause-disputed",
+    "claim": {
+      "complaint": "The airline says delay was caused by extraordinary circumstances; cause is contested."
+    },
+    "expected_outcome": "escalate_to_human",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 6, paragraph 3.4.4",
+      "text": "The airline is not obliged to provide paragraph 3.8 facilities when delay is caused by extraordinary circumstances under paragraphs 1.4 and 1.5 that could not have been avoided despite reasonable measures."
+    },
+    "required_facts": [
+      "extraordinary circumstances",
+      "reasonable measures"
+    ]
+  },
+  {
+    "id": "S17-domestic-downgrade",
+    "claim": {
+      "complaint": "I was involuntarily carried in a lower class on a domestic sector."
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 6, paragraph 3.5.1(a)",
+      "text": "For a domestic sector, involuntary downgrading requires reimbursement of 75% of ticket cost including taxes."
+    },
+    "required_facts": [
+      "involuntary",
+      "domestic",
+      "75%",
+      "including taxes"
+    ]
+  },
+  {
+    "id": "S18-international-downgrade-1200",
+    "claim": {
+      "complaint": "I was involuntarily downgraded on an international flight of 1200 km."
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 7, paragraph 3.5.1(b)",
+      "text": "For international sectors, reimbursement including taxes is 30% for 1500 km or less, 50% between 1500 km and 3500 km, and 75% above 3500 km."
+    },
+    "required_facts": [
+      "international",
+      "1500 km or less",
+      "30%"
+    ]
+  },
+  {
+    "id": "S19-international-downgrade-2600",
+    "claim": {
+      "complaint": "I was involuntarily downgraded on an international flight of 2600 km."
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 7, paragraph 3.5.1(b)",
+      "text": "For international sectors, reimbursement including taxes is 30% for 1500 km or less, 50% between 1500 km and 3500 km, and 75% above 3500 km."
+    },
+    "required_facts": [
+      "1500 km and 3500 km",
+      "50%"
+    ]
+  },
+  {
+    "id": "S20-international-downgrade-4000",
+    "claim": {
+      "complaint": "I was involuntarily downgraded on an international flight of 4000 km."
+    },
+    "expected_outcome": "pay_as_computed",
+    "supporting_passage": {
+      "citation": "DGCA_Passenger_Rights.pdf, page 7, paragraph 3.5.1(b)",
+      "text": "For international sectors, reimbursement including taxes is 30% for 1500 km or less, 50% between 1500 km and 3500 km, and 75% above 3500 km."
+    },
+    "required_facts": [
+      "above 3500 km",
+      "75%"
+    ]
+  }
+]

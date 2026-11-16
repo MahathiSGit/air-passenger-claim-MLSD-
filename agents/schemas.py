@@ -1,16 +1,7 @@
-"""Shared data contract used by the agents and their callers."""
-
+﻿"""Typed result contracts shared by agents and the REST API."""
 from dataclasses import asdict, dataclass, field
 from typing import Any, Literal
-
-Recommendation = Literal[
-    "pay_as_computed",
-    "request_further_evidence",
-    "decline",
-    "escalate_to_human",
-]
-
-
+Recommendation = Literal["pay_as_computed", "request_further_evidence", "decline", "escalate_to_human"]
 @dataclass
 class ClaimAnalysis:
     claim_type: str | None = None
@@ -24,15 +15,11 @@ class ClaimAnalysis:
     alternate_flight: str | None = None
     complaint_summary: str = ""
     missing_information: list[str] = field(default_factory=list)
-
-
 @dataclass
 class ResearchResult:
     relevant_provisions: list[dict[str, Any]] = field(default_factory=list)
     conditions: list[str] = field(default_factory=list)
     evidence_gaps: list[str] = field(default_factory=list)
-
-
 @dataclass
 class EntitlementResult:
     recommendation: Recommendation
@@ -41,15 +28,11 @@ class EntitlementResult:
     currency: str | None = None
     citations: list[str] = field(default_factory=list)
     uncertainties: list[str] = field(default_factory=list)
-
-
 @dataclass
 class VerificationResult:
     supported: bool
     flags: list[str] = field(default_factory=list)
     recommendation: Recommendation | None = None
-
-
 @dataclass
 class WorkflowResult:
     mode: Literal["demo", "llm"]
@@ -58,6 +41,6 @@ class WorkflowResult:
     entitlement: EntitlementResult
     verification: VerificationResult
     note: str
-
-    def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+    prompt_version: str = "demo-v1"
+    model_calls: list[dict[str, Any]] = field(default_factory=list)
+    def to_dict(self) -> dict[str, Any]: return asdict(self)
